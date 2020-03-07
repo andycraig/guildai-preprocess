@@ -1,0 +1,12 @@
+- model: example
+  operations:
+    prepare:
+      cmd: prepare
+    train:
+      cmd: train
+      requires: preprocessed
+  resources:
+    preprocessed:
+      sources:
+      - operation: prepare
+        select: preprocessed.txt
